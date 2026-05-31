@@ -3,641 +3,478 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="张宇涵 | 新闻传播学研究者 - 关注数字传播、AI传播、网络健康传播与新媒体运营。中国人民大学新闻传播学硕士。">
+    <meta name="keywords" content="新闻传播,数字传播,AI传播,新媒体运营,张宇涵,中国人民大学">
+    <meta name="author" content="张宇涵">
+    <meta property="og:title" content="张宇涵 | 新闻传播研究者">
+    <meta property="og:description" content="关注数字传播、AI传播、网络健康传播与新媒体运营。致力于探索技术变革背景下的信息传播机制与社会影响。">
+    <meta property="og:type" content="website">
     <title>张宇涵 | 新闻传播研究者</title>
-    <meta name="description" content="张宇涵 - 新闻传播学硕士研究生，喜欢关注时代新浪潮、新现象、永远对一切保持好奇、对自己的热爱保持专注">
-    <meta name="keywords" content="张宇涵,新闻传播,新闻采写,数字媒体,新媒体运营">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0a3d62',
-                        secondary: '#3c6382',
-                        neutral: '#f5f6fa',
-                        dark: '#1e272e',
-                        light: '#fafafa'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
+    <style>
+        :root {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #f1f5f9;
+            --bg-card: #ffffff;
+            --bg-elevated: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #94a3b8;
+            --accent: #1e3a8a;
+            --accent-light: #3b82f6;
+            --accent-glow: rgba(30, 58, 138, 0.08);
+            --blue-soft: #dbeafe;
+            --border: rgba(0, 0, 0, 0.06);
+            --border-light: rgba(0, 0, 0, 0.03);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.02);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.03);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.03);
+            --glass-bg: rgba(255,255,255,0.8);
+            --glass-border: rgba(0,0,0,0.05);
+            --tag-bg: #f1f5f9;
+            --tag-text: #334155;
+            --timeline-line: #cbd5e1;
+            --progress-bg: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1e3a8a;
+            --overlay: rgba(248,250,252,0.96);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --font-sans: 'Inter', 'PingFang SC', 'SF Pro Display', 'Helvetica Neue', 'Noto Sans SC', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            --transition-fast: 0.2s cubic-bezier(0.25,0.1,0.25,1);
+            --transition-smooth: 0.35s cubic-bezier(0.4,0,0.2,1);
+            --transition-bounce: 0.5s cubic-bezier(0.34,1.56,0.64,1);
+            --max-width: 1200px;
+            --nav-height: 60px;
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-balance {
-                text-wrap: balance;
-            }
-            .animate-fade-in {
-                animation: fadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-            }
-            .animate-slide-up {
-                animation: slideUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-            }
-            .animate-fade-in-scroll {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-            }
-            .animate-fade-in-scroll.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            .progress-bar {
-                height: 3px;
-                background: #0a3d62;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 50;
-                transition: width 0.25s cubic-bezier(0.23, 1, 0.32, 1);
-            }
-            .card-hover {
-                transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
-                            box-shadow 0.45s cubic-bezier(0.23, 1, 0.32, 1),
-                            background 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-6px) scale(1.01);
-                box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
-            }
-            .timeline-item {
-                position: relative;
-                padding-left: 32px;
-            }
-            .timeline-item::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 8px;
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                background: #0a3d62;
-                transition: background 0.3s ease;
-            }
-            .timeline-item::after {
-                content: '';
-                position: absolute;
-                left: 7px;
-                top: 24px;
-                width: 2px;
-                height: calc(100% - 16px);
-                background: #e2e8f0;
-                transition: background 0.3s ease;
-            }
-            .timeline-item:last-child::after {
-                display: none;
-            }
-            .dark .timeline-item::before {
-                background: #3b82f6;
-            }
-            .dark .timeline-item::after {
-                background: #4a5568;
-            }
+        body.dark {
+            --bg-primary: #0b1120;
+            --bg-secondary: #111827;
+            --bg-card: #1e293b;
+            --bg-elevated: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-tertiary: #64748b;
+            --accent: #60a5fa;
+            --accent-light: #3b82f6;
+            --accent-glow: rgba(96,165,250,0.15);
+            --blue-soft: #1e3a5f;
+            --border: rgba(255,255,255,0.08);
+            --border-light: rgba(255,255,255,0.04);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+            --glass-bg: rgba(30,41,59,0.75);
+            --glass-border: rgba(255,255,255,0.06);
+            --tag-bg: #1e293b;
+            --tag-text: #cbd5e1;
+            --timeline-line: #334155;
+            --progress-bg: #1e293b;
+            --badge-bg: #1e3a5f;
+            --badge-text: #93c5fd;
+            --overlay: rgba(11,17,32,0.96);
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        * {
-            backface-visibility: hidden;
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            will-change: transform, opacity;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-            transition: background-color 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-                        color 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; scroll-padding-top:var(--nav-height); -webkit-font-smoothing:antialiased; }
         body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
+            font-family:var(--font-sans);
+            background-color:var(--bg-primary);
+            color:var(--text-primary);
+            line-height:1.6;
+            transition:background-color 0.4s, color 0.4s;
+            overflow-x:hidden;
+            position:relative;
         }
-
-        nav {
-            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), 
-                        background 0.3s ease;
+        /* 艺术感背景元素 */
+        body::before {
+            content:'';
+            position:fixed;
+            top:0; left:0; width:100%; height:100%;
+            pointer-events:none;
+            z-index:0;
+            background:
+                radial-gradient(circle at 15% 20%, var(--accent-glow) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(59,130,246,0.06) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(30,58,138,0.03) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(255,255,255,0.4) 0%, transparent 50%);
+            opacity:0.8;
         }
+        body.dark::before {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(96,165,250,0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(59,130,246,0.08) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(96,165,250,0.04) 0%, transparent 60%),
+                linear-gradient(135deg, rgba(15,23,42,0.9) 0%, transparent 60%);
+            opacity:0.9;
+        }
+        body::after {
+            content:'';
+            position:fixed;
+            top:0; left:0; width:100%; height:100%;
+            pointer-events:none;
+            z-index:0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a8a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity:0.5;
+        }
+        #progress-bar { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg, var(--accent), var(--accent-light)); z-index:10000; transition:width 0.1s; border-radius:0 2px 2px 0; }
+        #loading-screen { position:fixed; inset:0; z-index:99999; background:var(--overlay); display:flex; align-items:center; justify-content:center; flex-direction:column; transition:opacity 0.5s, visibility 0.5s; backdrop-filter:blur(20px); }
+        #loading-screen.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+        .loader-icon { width:48px; height:48px; border-radius:50%; border:3px solid var(--border); border-top-color:var(--accent); animation:spin 0.8s linear infinite; }
+        @keyframes spin { to { transform:rotate(360deg); } }
+        .loader-text { margin-top:20px; font-size:14px; color:var(--text-tertiary); letter-spacing:0.04em; font-family:var(--font-mono); }
+        #navbar { position:fixed; top:0; left:0; right:0; z-index:9990; height:var(--nav-height); background:var(--glass-bg); backdrop-filter:blur(18px); border-bottom:1px solid var(--glass-border); transition:all var(--transition-smooth); display:flex; align-items:center; padding:0 24px; }
+        #navbar.scrolled { box-shadow:var(--shadow-md); }
+        .nav-inner { max-width:var(--max-width); width:100%; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+        .nav-brand { font-weight:700; font-size:17px; letter-spacing:-0.01em; color:var(--text-primary); text-decoration:none; }
+        .nav-links { display:flex; align-items:center; gap:6px; list-style:none; }
+        .nav-links a { text-decoration:none; color:var(--text-secondary); font-size:14px; font-weight:500; padding:7px 13px; border-radius:20px; transition:all var(--transition-fast); }
+        .nav-links a:hover, .nav-links a.active { color:var(--text-primary); background:var(--border-light); }
+        .nav-actions { display:flex; align-items:center; gap:8px; }
+        #dark-toggle, #mobile-menu-btn { width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:var(--bg-card); cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; color:var(--text-secondary); transition:all var(--transition-fast); }
+        #mobile-menu-btn { display:none; }
+        @media (max-width:767px) {
+            .nav-links { display:none; position:absolute; top:var(--nav-height); left:0; right:0; background:var(--glass-bg); backdrop-filter:blur(20px); flex-direction:column; padding:12px 16px; border-bottom:1px solid var(--border); z-index:9989; }
+            .nav-links.open { display:flex; }
+            #mobile-menu-btn { display:flex; }
+        }
+        .section { padding:90px 24px; max-width:var(--max-width); margin:0 auto; position:relative; z-index:2; }
+        .section-label { font-size:11px; text-transform:uppercase; letter-spacing:0.12em; color:var(--accent); font-weight:600; margin-bottom:12px; font-family:var(--font-mono); }
+        .section-title { font-size:clamp(28px,4vw,40px); font-weight:700; letter-spacing:-0.02em; margin-bottom:16px; line-height:1.2; }
+        .section-subtitle { font-size:16px; color:var(--text-secondary); max-width:560px; margin-bottom:40px; }
+        .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:25px; font-size:15px; font-weight:600; cursor:pointer; border:none; text-decoration:none; transition:all var(--transition-smooth); }
+        .btn-primary { background:var(--accent); color:#fff; box-shadow:0 4px 16px rgba(30,58,138,0.3); }
+        .btn-primary:hover { background:var(--accent-light); transform:translateY(-2px); }
+        .btn-outline { background:transparent; border:1.5px solid var(--border); color:var(--text-primary); }
+        .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
+        #hero { min-height:100vh; display:flex; align-items:center; padding:100px 24px 60px; max-width:var(--max-width); margin:0 auto; gap:50px; position:relative; z-index:2; }
+        .hero-left { flex:1 1 55%; }
+        .hero-right { flex:1 1 45%; display:flex; flex-direction:column; gap:16px; }
+        .hero-badge { display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; color:var(--accent); background:var(--accent-glow); padding:6px 14px; border-radius:20px; margin-bottom:20px; }
+        .hero-name { font-size:clamp(42px,7vw,68px); font-weight:700; letter-spacing:-0.03em; line-height:1.05; }
+        .hero-subtitle { font-size:clamp(16px,2vw,19px); color:var(--text-secondary); margin-bottom:8px; }
+        .hero-eng { font-size:14px; color:var(--text-tertiary); margin-bottom:20px; font-family:var(--font-mono); }
+        .hero-desc { font-size:15px; color:var(--text-secondary); max-width:480px; margin-bottom:30px; }
+        .hero-info-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:18px 20px; display:flex; align-items:center; gap:14px; transition:all var(--transition-smooth); box-shadow:var(--shadow-sm); }
+        .hero-info-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); border-color:var(--accent); }
+        .hero-info-icon { font-size:28px; width:46px; height:46px; border-radius:var(--radius-sm); background:var(--accent-glow); display:flex; align-items:center; justify-content:center; }
+        .hero-info-text { font-size:14px; font-weight:500; } .hero-info-text small { display:block; font-weight:400; color:var(--text-tertiary); font-size:12px; }
+        .timeline { position:relative; padding-left:0; margin-top:20px; }
+        .timeline::before { content:''; position:absolute; left:28px; top:0; bottom:0; width:2px; background:var(--timeline-line); }
+        @media (min-width:768px) { .timeline::before { left:50%; transform:translateX(-50%); } }
+        .timeline-item { position:relative; padding-left:60px; margin-bottom:36px; transition:all var(--transition-smooth); }
+        @media (min-width:768px) { .timeline-item { padding-left:0; width:46%; } .timeline-item:nth-child(odd) { margin-left:0; margin-right:auto; text-align:right; padding-right:40px; } .timeline-item:nth-child(even) { margin-left:auto; margin-right:0; text-align:left; padding-left:40px; } }
+        .timeline-dot { position:absolute; left:18px; top:4px; width:22px; height:22px; border-radius:50%; background:var(--bg-card); border:3px solid var(--accent); z-index:2; box-shadow:0 0 0 6px var(--accent-glow); }
+        @media (min-width:768px) { .timeline-dot { left:50%; transform:translateX(-50%); } .timeline-item:nth-child(odd) .timeline-dot { left:auto; right:-11px; transform:none; } .timeline-item:nth-child(even) .timeline-dot { left:-11px; transform:none; } }
+        .timeline-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:20px 22px; box-shadow:var(--shadow-sm); }
+        .timeline-item:hover .timeline-card { box-shadow:var(--shadow-lg); border-color:var(--accent); }
+        .timeline-card h4 { font-size:17px; font-weight:700; } .timeline-org { font-size:14px; color:var(--accent); font-weight:600; } .timeline-date { font-size:12px; color:var(--text-tertiary); font-family:var(--font-mono); margin-bottom:8px; }
+        .timeline-card ul { list-style:none; } .timeline-card ul li { font-size:13px; color:var(--text-secondary); padding:3px 0 3px 16px; position:relative; } .timeline-card ul li::before { content:'→'; position:absolute; left:0; color:var(--accent); }
+        .project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:30px; }
+        .project-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-sm); transition:all var(--transition-smooth); }
+        .project-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-3px); border-color:var(--accent); }
+        .skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+        @media (max-width:600px) { .skills-grid { grid-template-columns:1fr; } }
+        .honor-list { display:flex; flex-wrap:wrap; gap:12px; }
+        .honor-badge { background:var(--badge-bg); color:var(--badge-text); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:500; }
+        .skill-tags { display:flex; flex-wrap:wrap; gap:8px; }
+        .skill-tag { background:var(--tag-bg); color:var(--tag-text); padding:8px 16px; border-radius:20px; font-size:14px; }
+        .wordcloud { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 18px; padding:20px 0; }
+        .wordcloud span { transition:all var(--transition-bounce); cursor:default; opacity:0.9; }
+        .wordcloud span:hover { transform:scale(1.2); opacity:1; color:var(--accent); }
+        .wc-lg { font-size:38px; font-weight:800; } .wc-md { font-size:26px; font-weight:700; } .wc-sm { font-size:18px; font-weight:500; } .wc-xs { font-size:14px; font-weight:400; }
+        .portfolio-upload-area { background:var(--bg-card); border:2px dashed var(--border); border-radius:var(--radius-lg); padding:30px; text-align:center; cursor:pointer; transition:all var(--transition-smooth); margin-bottom:20px; }
+        .portfolio-upload-area:hover { border-color:var(--accent); background:var(--accent-glow); }
+        .filter-bar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; }
+        .filter-btn { padding:8px 18px; border-radius:20px; border:1.5px solid var(--border); background:transparent; cursor:pointer; font-size:13px; font-weight:500; color:var(--text-secondary); transition:all var(--transition-fast); }
+        .filter-btn.active, .filter-btn:hover { background:var(--accent); color:#fff; border-color:var(--accent); }
+        .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; }
+        .portfolio-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; transition:all var(--transition-smooth); box-shadow:var(--shadow-sm); cursor:pointer; }
+        .portfolio-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); border-color:var(--accent); }
+        .portfolio-thumb { width:100%; aspect-ratio:16/10; background:var(--bg-secondary); display:flex; align-items:center; justify-content:center; font-size:40px; color:var(--text-tertiary); position:relative; overflow:hidden; }
+        .portfolio-info { padding:16px 18px; } .portfolio-info h4 { font-size:15px; font-weight:700; } .portfolio-cat { font-size:11px; color:var(--accent); font-weight:600; text-transform:uppercase; }
+        .modal-overlay { position:fixed; inset:0; z-index:99995; background:rgba(0,0,0,0.5); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; transition:all var(--transition-smooth); }
+        .modal-overlay.active { opacity:1; visibility:visible; }
+        .modal-content { background:var(--bg-elevated); border-radius:var(--radius-xl); padding:32px; max-width:600px; width:100%; max-height:80vh; overflow-y:auto; box-shadow:var(--shadow-xl); position:relative; }
+        .modal-close { position:absolute; top:14px; right:14px; width:36px; height:36px; border-radius:50%; border:1px solid var(--border); background:var(--bg-card); cursor:pointer; font-size:16px; }
+        #back-to-top { position:fixed; bottom:28px; right:28px; z-index:9990; width:44px; height:44px; border-radius:50%; background:var(--bg-card); border:1.5px solid var(--border); cursor:pointer; font-size:20px; opacity:0; visibility:hidden; transition:all var(--transition-smooth); }
+        #back-to-top.visible { opacity:1; visibility:visible; }
+        .site-footer { text-align:center; padding:30px 24px; font-size:12px; color:var(--text-tertiary); border-top:1px solid var(--border-light); max-width:var(--max-width); margin:0 auto; }
+        .anim-fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.7s, transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+        .anim-fade-up.visible { opacity:1; transform:translateY(0); }
+        .anim-scale-in { opacity:0; transform:scale(0.92); transition:opacity 0.6s, transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+        .anim-scale-in.visible { opacity:1; transform:scale(1); }
     </style>
 </head>
-<body class="bg-light dark:bg-dark text-gray-800 dark:text-gray-200 transition-colors duration-300">
-    <div id="progressBar" class="progress-bar"></div>
-
-    <nav class="fixed w-full top-0 z-40 bg-white/90 dark:bg-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-primary dark:text-blue-400 font-semibold text-xl">张宇涵</a>
-                    <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">News Communication</span>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="#about" class="hidden sm:block hover:text-primary dark:hover:text-blue-400 transition-colors">关于</a>
-                    <a href="#experience" class="hidden sm:block hover:text-primary dark:hover:text-blue-400 transition-colors">经历</a>
-                    <a href="#research" class="hidden sm:block hover:text-primary dark:hover:text-blue-400 transition-colors">研究</a>
-                    <a href="#portfolio" class="hidden sm:block hover:text-primary dark:hover:text-blue-400 transition-colors">作品</a>
-                    <a href="#contact" class="hidden sm:block hover:text-primary dark:hover:text-blue-400 transition-colors">联系</a>
-                    <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fa fa-moon-o dark:hidden"></i>
-                        <i class="fa fa-sun-o hidden dark:block"></i>
-                    </button>
-                </div>
+<body>
+    <div id="loading-screen"><div class="loader-icon"></div><p class="loader-text">ZHANG YUHAN</p></div>
+    <div id="progress-bar"></div>
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">张宇涵</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#education" data-section="education">教育</a></li>
+                <li><a href="#practice" data-section="practice">实践</a></li>
+                <li><a href="#honor-skills" data-section="honor-skills">荣誉技能</a></li>
+                <li><a href="#self-eval" data-section="self-eval">自我评价</a></li>
+                <li><a href="#portfolio" data-section="portfolio">作品集</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="dark-toggle" aria-label="切换暗黑模式">🌙</button>
+                <button id="mobile-menu-btn" aria-label="菜单">☰</button>
             </div>
         </div>
     </nav>
 
-    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-dark transition-opacity duration-500">
-        <div class="animate-pulse text-primary dark:text-blue-400 text-2xl">Yuhan Zhang</div>
+    <section id="hero">
+        <div class="hero-left anim-fade-up">
+            <span class="hero-badge">News Communication Researcher</span>
+            <h1 class="hero-name">张宇涵</h1>
+            <p class="hero-subtitle">新闻传播学硕士研究生</p>
+            <p class="hero-eng">Researcher · Storyteller · Communicator</p>
+            <p class="hero-desc">关注数字传播、AI传播、网络健康传播与新媒体运营。<br>致力于探索技术变革背景下的信息传播机制与社会影响。</p>
+            <div class="hero-btns"><a href="#portfolio" class="btn btn-primary">查看作品</a><a href="#education" class="btn btn-outline">了解更多</a></div>
+        </div>
+        <div class="hero-right anim-fade-up">
+            <div class="hero-info-card"><div class="hero-info-icon">🎓</div><div class="hero-info-text">中国人民大学<small>新闻传播学硕士</small></div></div>
+            <div class="hero-info-card"><div class="hero-info-icon">✍️</div><div class="hero-info-text">《中国记者》作者<small>学术论文发表</small></div></div>
+            <div class="hero-info-card"><div class="hero-info-icon">🎥</div><div class="hero-info-text">百万播放作品创作者<small>新闻短视频</small></div></div>
+            <div class="hero-info-card"><div class="hero-info-icon">📊</div><div class="hero-info-text">新媒体传播研究<small>数据驱动洞察</small></div></div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <p class="section-label anim-fade-in">Education</p>
+        <h2 class="section-title anim-fade-up">教育经历</h2>
+        <div class="timeline">
+            <div class="timeline-item anim-fade-up"><div class="timeline-dot"></div><div class="timeline-card"><h4>中国人民大学</h4><p class="timeline-org">新闻传播学硕士</p><p class="timeline-date">2024—2027 · GPA 3.77/4.0</p><ul><li>数字传播</li><li>AI传播</li><li>网络健康传播</li><li>新媒体运营</li></ul></div></div>
+            <div class="timeline-item anim-fade-up"><div class="timeline-dot"></div><div class="timeline-card"><h4>北京印刷学院</h4><p class="timeline-org">新闻学本科</p><p class="timeline-date">2020—2024 · GPA 4.17/5.0</p></div></div>
+        </div>
+    </section>
+
+    <section id="practice" class="section">
+        <p class="section-label anim-fade-in">Practice</p>
+        <h2 class="section-title anim-fade-up">实践经历</h2>
+        <p class="section-subtitle anim-fade-up">实习经历</p>
+        <div class="timeline">
+            <div class="timeline-item anim-fade-up"><div class="timeline-dot"></div><div class="timeline-card"><h4>新媒体记者</h4><p class="timeline-org">中国新闻社</p><p class="timeline-date">2024</p><ul><li>春运三部曲系列报道</li><li>累计播放量超100万</li><li>两部作品获得好稿奖</li></ul></div></div>
+            <div class="timeline-item anim-fade-up"><div class="timeline-dot"></div><div class="timeline-card"><h4>理论编辑部助理编辑</h4><p class="timeline-org">光明网</p><p class="timeline-date">2025</p><ul><li>审校30余篇专家稿件</li><li>制作多期理论图解</li><li>参与大型融媒体活动筹备</li></ul></div></div>
+            <div class="timeline-item anim-fade-up"><div class="timeline-dot"></div><div class="timeline-card"><h4>企业社会责任专员实习生</h4><p class="timeline-org">快手科技</p><p class="timeline-date">2025</p><ul><li>公益传播策划</li><li>中华慈善日活动</li><li>AI乡村课堂项目</li><li>媒体关系维护</li></ul></div></div>
+        </div>
+        <p class="section-subtitle anim-fade-up" style="margin-top:50px;">项目经历</p>
+        <div class="project-grid anim-fade-up">
+            <div class="project-card"><span style="font-size:28px;">📊</span><h4 style="margin:10px 0;">北京国企新媒体传播力蓝皮书（2025）</h4><p style="font-size:14px; color:var(--text-secondary);">数据整理 · 指标分析 · 传播策略研究</p><p style="font-size:13px; color:var(--text-tertiary); margin-top:6px;">提出公众号运营体系优化建议</p></div>
+            <div class="project-card"><span style="font-size:28px;">📄</span><h4 style="margin:10px 0;">极端天气报道的原则、理念与方法</h4><p style="font-size:14px; color:var(--text-secondary);">发表于《中国记者》</p><p style="font-size:13px; color:var(--text-tertiary); margin-top:6px;">灾害传播 · 新闻伦理 · 风险传播</p></div>
+        </div>
+    </section>
+
+    <section id="honor-skills" class="section">
+        <p class="section-label anim-fade-in">Honor & Skills</p>
+        <h2 class="section-title anim-fade-up">荣誉与技能</h2>
+        <div class="skills-grid anim-fade-up">
+            <div>
+                <h3 style="margin-bottom:16px; font-weight:600;">🏆 荣誉奖项</h3>
+                <div class="honor-list">
+                    <span class="honor-badge">国家奖学金</span>
+                    <span class="honor-badge">北京市优秀毕业生</span>
+                    <span class="honor-badge">优秀学生干部</span>
+                    <span class="honor-badge">优秀共青团员</span>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom:16px; font-weight:600;">🛠️ 专业技能</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">英语 CET-6</span>
+                    <span class="skill-tag">计算机二级</span>
+                    <span class="skill-tag">Adobe Premiere</span>
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">数据分析</span>
+                    <span class="skill-tag">新媒体运营</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="self-eval" class="section">
+        <p class="section-label anim-fade-in">Self Evaluation</p>
+        <h2 class="section-title anim-fade-up">自我评价</h2>
+        <div class="wordcloud anim-fade-up">
+            <span class="wc-lg" style="color:var(--accent);">敢尝试</span>
+            <span class="wc-md" style="color:var(--accent-light);">爱冒险</span>
+            <span class="wc-lg">爱创新</span>
+            <span class="wc-sm" style="color:var(--text-secondary);">文艺</span>
+            <span class="wc-md">敏感</span>
+            <span class="wc-lg" style="color:var(--accent);">责任心</span>
+            <span class="wc-sm">独立思考</span>
+            <span class="wc-xs">人文关怀</span>
+            <span class="wc-md" style="color:var(--accent-light);">好奇心</span>
+            <span class="wc-sm">团队协作</span>
+            <span class="wc-xs">专注</span>
+            <span class="wc-md">坚韧</span>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <p class="section-label anim-fade-in">Portfolio</p>
+        <h2 class="section-title anim-fade-up">作品集</h2>
+        <div class="portfolio-upload-area anim-fade-up" id="upload-trigger">
+            <span style="font-size:36px;">＋</span>
+            <p style="margin-top:8px; color:var(--text-secondary);">点击上传新作品（图片/视频）</p>
+            <input type="file" id="upload-input" accept="image/*,video/*" style="display:none;">
+        </div>
+        <div class="filter-bar anim-fade-up">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="news">新闻报道</button>
+            <button class="filter-btn" data-filter="video">短视频</button>
+            <button class="filter-btn" data-filter="design">视觉设计</button>
+            <button class="filter-btn" data-filter="campaign">传播策划</button>
+        </div>
+        <div class="portfolio-grid" id="portfolio-grid">
+            <div class="portfolio-card anim-scale-in" data-category="news video"><div class="portfolio-thumb">🎥</div><div class="portfolio-info"><p class="portfolio-cat">新闻报道 · 短视频</p><h4>春运三部曲系列</h4><p class="portfolio-desc">播放超100万</p></div></div>
+            <div class="portfolio-card anim-scale-in" data-category="news"><div class="portfolio-thumb">📰</div><div class="portfolio-info"><p class="portfolio-cat">新闻报道</p><h4>好稿奖获奖作品</h4></div></div>
+            <div class="portfolio-card anim-scale-in" data-category="design"><div class="portfolio-thumb">🎨</div><div class="portfolio-info"><p class="portfolio-cat">视觉设计</p><h4>理论图解系列</h4></div></div>
+            <div class="portfolio-card anim-scale-in" data-category="design"><div class="portfolio-thumb">🖼️</div><div class="portfolio-info"><p class="portfolio-cat">视觉设计</p><h4>海报设计作品</h4></div></div>
+            <div class="portfolio-card anim-scale-in" data-category="campaign"><div class="portfolio-thumb">🤝</div><div class="portfolio-info"><p class="portfolio-cat">传播策划</p><h4>中华慈善日公益传播</h4></div></div>
+            <div class="portfolio-card anim-scale-in" data-category="campaign"><div class="portfolio-thumb">🌾</div><div class="portfolio-info"><p class="portfolio-cat">传播策划</p><h4>AI乡村课堂项目</h4></div></div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-content"><button class="modal-close" id="modal-close">✕</button><h3 id="modal-title"></h3><p class="modal-meta" id="modal-meta"></p><p id="modal-desc"></p></div>
     </div>
 
-    <section class="min-h-screen pt-24 pb-16 md:pb-0 flex items-center">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-slide-up">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-4">张宇涵</h1>
-                    <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">新闻传播学硕士研究生</h2>
-                    <p class="text-lg text-gray-500 dark:text-gray-400 mb-2">Researcher · Storyteller · Communicator</p>
-                    <div class="w-16 h-1 bg-primary dark:bg-blue-400 my-8"></div>
-                    <p class="text-lg leading-relaxed mb-8 text-balance">
-                        关注数字传播、AI传播、网络健康传播与新媒体运营。<br>
-                        致力于探索技术变革背景下的信息传播机制与社会影响。
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#portfolio" class="px-6 py-3 bg-primary dark:bg-blue-600 text-white rounded-lg hover:bg-secondary dark:hover:bg-blue-500 transition-colors">
-                            查看作品
-                        </a>
-                        <a href="#about" class="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                            了解更多
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg animate-fade-in card-hover">
-                    <h3 class="text-xl font-semibold mb-6 border-b pb-3 border-gray-200 dark:border-gray-700">个人信息</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <span class="w-8 text-primary dark:text-blue-400"><i class="fa fa-graduation-cap"></i></span>
-                            <span>中国人民大学</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-8 text-primary dark:text-blue-400"><i class="fa fa-book"></i></span>
-                            <span>新闻传播学硕士</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-8 text-primary dark:text-blue-400"><i class="fa fa-pencil"></i></span>
-                            <span>《中国记者》作者</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-8 text-primary dark:text-blue-400"><i class="fa fa-video-camera"></i></span>
-                            <span>百万播放新闻作品创作者</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-8 text-primary dark:text-blue-400"><i class="fa fa-bar-chart"></i></span>
-                            <span>新媒体传播研究</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-20 bg-neutral dark:bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">关于我</h2>
-                <p class="text-gray-600 dark:text-gray-400">教育背景与专业特点</p>
-            </div>
-
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 text-center">教育背景</h3>
-                <div class="space-y-8 max-w-3xl mx-auto">
-                    <div class="timeline-item pl-8 pb-8">
-                        <h4 class="text-xl font-bold">中国人民大学</h4>
-                        <p class="text-primary dark:text-blue-400 font-medium">新闻传播学硕士 | 2024—2027</p>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2">GPA：3.77/4.0</p>
-                        <div class="mt-4">
-                            <h5 class="font-medium mb-2">研究方向：</h5>
-                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
-                                <li>数字传播</li>
-                                <li>AI传播</li>
-                                <li>网络健康传播</li>
-                                <li>新媒体运营</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item pl-8">
-                        <h4 class="text-xl font-bold">北京印刷学院</h4>
-                        <p class="text-primary dark:text-blue-400 font-medium">新闻学本科 | 2020—2024</p>
-                        <p class="text-gray-600 dark:text-gray-400 mt-2">GPA：4.17/5.0</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-2xl font-semibold mb-8 text-center">我的特点</h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow card-hover text-center">
-                        <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-file-text-o text-primary dark:text-blue-400 text-xl"></i>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2">学术研究</h4>
-                        <p class="text-gray-600 dark:text-gray-400">论文发表与课题参与</p>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow card-hover text-center">
-                        <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-pencil-square-o text-primary dark:text-blue-400 text-xl"></i>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2">媒体实践</h4>
-                        <p class="text-gray-600 dark:text-gray-400">新闻采写与传播策划</p>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow card-hover text-center">
-                        <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-camera text-primary dark:text-blue-400 text-xl"></i>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2">内容创作</h4>
-                        <p class="text-gray-600 dark:text-gray-400">视频、图解与新媒体运营</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">实践经历</h2>
-                <p class="text-gray-600 dark:text-gray-400">媒体与企业传播实践经验</p>
-            </div>
-
-            <div class="max-w-3xl mx-auto space-y-12">
-                <div class="timeline-item pl-8 pb-12">
-                    <h4 class="text-xl font-bold">中国新闻社</h4>
-                    <p class="text-primary dark:text-blue-400 font-medium">新媒体记者 | 2024</p>
-                    <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
-                        <li>春运三部曲系列报道</li>
-                        <li>累计播放量超100万</li>
-                        <li>两部作品获得好稿奖</li>
-                    </ul>
-                </div>
-                <div class="timeline-item pl-8 pb-12">
-                    <h4 class="text-xl font-bold">光明网</h4>
-                    <p class="text-primary dark:text-blue-400 font-medium">理论编辑部助理编辑 | 2025</p>
-                    <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
-                        <li>审校30余篇专家稿件</li>
-                        <li>制作多期理论图解</li>
-                        <li>参与大型融媒体活动筹备</li>
-                    </ul>
-                </div>
-                <div class="timeline-item pl-8">
-                    <h4 class="text-xl font-bold">快手科技</h4>
-                    <p class="text-primary dark:text-blue-400 font-medium">企业社会责任专员实习生 | 2025</p>
-                    <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
-                        <li>公益传播策划</li>
-                        <li>中华慈善日活动</li>
-                        <li>AI乡村课堂项目</li>
-                        <li>媒体关系维护</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="research" class="py-20 bg-neutral dark:bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">研究与项目</h2>
-                <p class="text-gray-600 dark:text-gray-400">学术成果与研究项目</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow card-hover">
-                    <span class="text-sm text-primary dark:text-blue-400 font-medium">论文</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4">极端天气报道的原则、理念与方法</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4">发表平台：《中国记者》</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">灾害传播</span>
-                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">新闻伦理</span>
-                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">风险传播</span>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow card-hover">
-                    <span class="text-sm text-primary dark:text-blue-400 font-medium">项目</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4">北京国企新媒体传播力蓝皮书（2025）</h3>
-                    <h4 class="font-medium mb-2">职责：</h4>
-                    <ul class="space-y-1 text-gray-600 dark:text-gray-400 mb-4">
-                        <li>数据整理</li>
-                        <li>指标分析</li>
-                        <li>传播策略研究</li>
-                    </ul>
-                    <p class="text-gray-600 dark:text-gray-400"><strong>成果：</strong> 提出公众号运营体系优化建议</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">研究兴趣</h2>
-                <p class="text-gray-600 dark:text-gray-400">关注的传播领域与研究方向</p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-                <span class="px-4 py-2 bg-primary/10 dark:bg-blue-400/10 text-primary dark:text-blue-400 rounded-full text-lg font-medium">AI传播</span>
-                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-lg font-medium">数字传播</span>
-                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-lg font-medium">平台治理</span>
-                <span class="px-4 py-2 bg-primary/10 dark:bg-blue-400/10 text-primary dark:text-blue-400 rounded-full text-lg font-medium">网络健康传播</span>
-                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-lg font-medium">媒介社会学</span>
-                <span class="px-4 py-2 bg-primary/10 dark:bg-blue-400/10 text-primary dark:text-blue-400 rounded-full text-lg font-medium">算法传播</span>
-                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-lg font-medium">新闻生产研究</span>
-                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-lg font-medium">风险传播</span>
-                <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-lg font-medium">内容运营</span>
-                <span class="px-4 py-2 bg-primary/10 dark:bg-blue-400/10 text-primary dark:text-blue-400 rounded-full text-lg font-medium">新媒体传播</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-20 bg-neutral dark:bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">作品集</h2>
-                <p class="text-gray-600 dark:text-gray-400">新闻创作与传播实践成果</p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-3 mb-10">
-                <button class="filter-btn px-4 py-2 bg-primary dark:bg-blue-600 text-white rounded-lg">全部作品</button>
-                <button class="filter-btn px-4 py-2 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">新闻报道</button>
-                <button class="filter-btn px-4 py-2 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">短视频</button>
-                <button class="filter-btn px-4 py-2 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">视觉设计</button>
-                <button class="filter-btn px-4 py-2 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">传播策划</button>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow card-hover">
-                    <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                        <i class="fa fa-video-camera text-4xl text-gray-400"></i>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-lg">春运三部曲系列报道</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">中国新闻社 | 百万播放作品</p>
-                        <span class="inline-block mt-3 px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">新闻报道</span>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow card-hover">
-                    <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                        <i class="fa fa-image text-4xl text-gray-400"></i>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-lg">理论图解作品</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">光明网 | 理论传播可视化</p>
-                        <span class="inline-block mt-3 px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">视觉设计</span>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow card-hover">
-                    <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                        <i class="fa fa-bullhorn text-4xl text-gray-400"></i>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-lg">AI乡村课堂项目</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">快手科技 | 公益传播</p>
-                        <span class="inline-block mt-3 px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">传播策划</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">荣誉与资质</h2>
-                <p class="text-gray-600 dark:text-gray-400">奖项与专业能力认证</p>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
-                <div class="text-center p-4">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fa fa-trophy text-primary dark:text-blue-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">国家奖学金</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fa fa-certificate text-primary dark:text-blue-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">北京市优秀毕业生</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fa fa-users text-primary dark:text-blue-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">优秀学生干部</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fa fa-flag text-primary dark:text-blue-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">优秀共青团员</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fa fa-language text-primary dark:text-blue-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">英语 CET-6</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="w-12 h-12 bg-primary/10 dark:bg-blue-400/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <i class="fa fa-laptop text-primary dark:text-blue-400"></i>
-                    </div>
-                    <p class="text-sm font-medium">计算机二级</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-primary dark:bg-gray-900 text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-scroll">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-3">联系我</h2>
-                <p class="max-w-2xl mx-auto">欢迎交流新闻传播研究、新媒体运营与AI传播相关议题。</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-6">
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mr-4">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">邮箱</h4>
-                            <p class="text-gray-300">your-email@example.com</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mr-4">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">电话</h4>
-                            <p class="text-gray-300">your-phone-number</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="bg-white/10 p-4 rounded-lg text-center hover:bg-white/20 transition-colors">
-                        <i class="fa fa-weixin text-2xl mb-2"></i>
-                        <p class="text-sm">微信</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center hover:bg-white/20 transition-colors">
-                        <i class="fa fa-github text-2xl mb-2"></i>
-                        <p class="text-sm">GitHub</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center hover:bg-white/20 transition-colors">
-                        <i class="fa fa-wechat text-2xl mb-2"></i>
-                        <p class="text-sm">公众号</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center hover:bg-white/20 transition-colors">
-                        <i class="fa fa-linkedin text-2xl mb-2"></i>
-                        <p class="text-sm">LinkedIn</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center hover:bg-white/20 transition-colors">
-                        <i class="fa fa-file-text text-2xl mb-2"></i>
-                        <p class="text-sm">简历</p>
-                    </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center hover:bg-white/20 transition-colors">
-                        <i class="fa fa-graduation-cap text-2xl mb-2"></i>
-                        <p class="text-sm">学术主页</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-8 bg-gray-100 dark:bg-gray-950 text-gray-600 dark:text-gray-400">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>© 2025 张宇涵 | 新闻传播研究者</p>
-            <p class="text-sm mt-2">News Communication · Digital Media · AI Communication</p>
-        </div>
+    <footer class="site-footer">
+        <p>© 2026 张宇涵 · 新闻传播研究者</p>
+        <p>📧 zhangyuhan@example.com ｜ 📱 138-0000-0000</p>
     </footer>
-
-    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-primary dark:bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-400 cubic-bezier(0.23, 1, 0.32, 1)">
-        <i class="fa fa-arrow-up"></i>
-    </button>
+    <button id="back-to-top" aria-label="返回顶部">↑</button>
 
     <script>
-        function throttle(func, limit) {
-            let inThrottle;
-            return function() {
-                const args = arguments;
-                const context = this;
-                if (!inThrottle) {
-                    func.apply(context, args);
-                    inThrottle = true;
-                    setTimeout(() => inThrottle = false, limit);
-                }
-            }
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('opacity-0');
-                setTimeout(() => {
-                    document.getElementById('loader').style.display = 'none';
-                }, 500);
-            }, 1000);
-
-            const themeToggle = document.getElementById('themeToggle');
-            themeToggle.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-            });
-
-            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            }
-
-            const backToTop = document.getElementById('backToTop');
-            let lastScroll = 0;
-            const nav = document.querySelector('nav');
-
-            const handleScroll = throttle(() => {
-                const currentScroll = window.scrollY;
-                
-                if (currentScroll > 300) {
-                    backToTop.classList.remove('opacity-0', 'invisible');
-                    backToTop.classList.add('opacity-100', 'visible');
-                } else {
-                    backToTop.classList.add('opacity-0', 'invisible');
-                    backToTop.classList.remove('opacity-100', 'visible');
-                }
-                
-                if (currentScroll <= 80) {
-                    nav.style.transform = 'translateY(0)';
-                } else if (currentScroll > lastScroll && currentScroll > 100) {
-                    nav.style.transform = 'translateY(-100%)';
-                } else {
-                    nav.style.transform = 'translateY(0)';
-                }
-                lastScroll = currentScroll;
-                
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                document.getElementById('progressBar').style.width = scrolled + '%';
-
-                const scrollElements = document.querySelectorAll('.animate-fade-in-scroll');
-                scrollElements.forEach(el => {
-                    const rect = el.getBoundingClientRect();
-                    const isVisible = rect.top < window.innerHeight - 120;
-                    if (isVisible) el.classList.add('visible');
-                });
-            }, 15);
-
-            window.addEventListener('scroll', handleScroll);
-            handleScroll();
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', e => {
-                    e.preventDefault();
-                    const target = document.querySelector(anchor.getAttribute('href'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-
+        (function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const progressBar = document.getElementById('progress-bar');
+            const navbar = document.getElementById('navbar');
+            const darkToggle = document.getElementById('dark-toggle');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            const backToTop = document.getElementById('back-to-top');
+            const portfolioGrid = document.getElementById('portfolio-grid');
             const filterBtns = document.querySelectorAll('.filter-btn');
+            const uploadTrigger = document.getElementById('upload-trigger');
+            const uploadInput = document.getElementById('upload-input');
+            const portfolioModal = document.getElementById('portfolio-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalTitle = document.getElementById('modal-title');
+            const modalMeta = document.getElementById('modal-meta');
+            const modalDesc = document.getElementById('modal-desc');
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') { document.body.classList.add('dark'); darkToggle.textContent = '☀️'; }
+            darkToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark');
+                const isDark = document.body.classList.contains('dark');
+                darkToggle.textContent = isDark ? '☀️' : '🌙';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+
+            window.addEventListener('load', () => setTimeout(() => loadingScreen.classList.add('hidden'), 400));
+            if (document.readyState === 'complete') setTimeout(() => loadingScreen.classList.add('hidden'), 200);
+
+            function updateUI() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                progressBar.style.width = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) + '%' : '0%';
+                navbar.classList.toggle('scrolled', scrollTop > 30);
+                backToTop.classList.toggle('visible', scrollTop > 500);
+                document.querySelectorAll('section[id]').forEach(s => {
+                    const rect = s.getBoundingClientRect();
+                    if (rect.top <= 120 && rect.bottom >= 120) {
+                        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                        const link = document.querySelector(`.nav-links a[data-section="${s.id}"]`);
+                        if (link) link.classList.add('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', updateUI, { passive: true });
+            updateUI();
+
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                mobileMenuBtn.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+            });
+            navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navLinks.classList.remove('open'); mobileMenuBtn.textContent = '☰'; }));
+
+            const animObserver = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); animObserver.unobserve(e.target); } });
+            }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+            document.querySelectorAll('.anim-fade-up, .anim-scale-in').forEach(el => animObserver.observe(el));
+
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-primary', 'dark:bg-blue-600', 'text-white');
-                        b.classList.add('bg-white', 'dark:bg-gray-800');
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    portfolioGrid.querySelectorAll('.portfolio-card').forEach(card => {
+                        const cats = card.dataset.category || '';
+                        if (filter === 'all' || cats.includes(filter)) {
+                            card.style.display = ''; card.style.opacity = '1'; card.style.transform = 'scale(1)';
+                        } else {
+                            card.style.opacity = '0'; card.style.transform = 'scale(0.9)';
+                            setTimeout(() => { if (card.style.opacity === '0') card.style.display = 'none'; }, 300);
+                        }
                     });
-                    btn.classList.remove('bg-white', 'dark:bg-gray-800');
-                    btn.classList.add('bg-primary', 'dark:bg-blue-600', 'text-white');
                 });
             });
-        });
+
+            uploadTrigger.addEventListener('click', () => uploadInput.click());
+            uploadInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    const url = ev.target.result;
+                    const isVideo = file.type.startsWith('video/');
+                    const card = document.createElement('div');
+                    card.className = 'portfolio-card anim-scale-in';
+                    card.dataset.category = 'uploaded';
+                    card.innerHTML = `<div class="portfolio-thumb">${isVideo ? `<video src="${url}" muted autoplay loop style="width:100%;height:100%;object-fit:cover;"></video>` : `<img src="${url}" style="width:100%;height:100%;object-fit:cover;">`}</div><div class="portfolio-info"><p class="portfolio-cat">用户上传</p><h4>${file.name}</h4></div>`;
+                    card.addEventListener('click', () => {
+                        modalTitle.textContent = file.name;
+                        modalMeta.textContent = '用户上传作品';
+                        modalDesc.textContent = '点击预览已上传的媒体文件。';
+                        portfolioModal.classList.add('active');
+                    });
+                    portfolioGrid.appendChild(card);
+                    uploadInput.value = '';
+                };
+                reader.readAsDataURL(file);
+            });
+
+            portfolioGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.portfolio-card');
+                if (!card || card.querySelector('video') || card.querySelector('img')) return;
+                const title = card.querySelector('h4')?.textContent || '作品';
+                const cat = card.querySelector('.portfolio-cat')?.textContent || '';
+                modalTitle.textContent = title; modalMeta.textContent = cat;
+                modalDesc.textContent = '详细作品展示。';
+                portfolioModal.classList.add('active');
+            });
+            modalClose.addEventListener('click', () => portfolioModal.classList.remove('active'));
+            portfolioModal.addEventListener('click', (e) => { if (e.target === portfolioModal) portfolioModal.classList.remove('active'); });
+
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+                    }
+                });
+            });
+            document.addEventListener('keydown', (e) => { if (e.key === 'd' && e.ctrlKey) { e.preventDefault(); darkToggle.click(); } });
+        })();
     </script>
 </body>
 </html>
